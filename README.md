@@ -1,2 +1,2 @@
 # NERViagens
-Projeto sátira de Evangelion de forma a praticar conhecimento de HTML/CSS.
+Evangelion satire project in order to practice my knowledge of pure HTML and CSS
