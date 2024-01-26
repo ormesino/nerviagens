@@ -9,21 +9,28 @@
   font-family: "Inter", sans-serif;
 }
 
+/* Outras configs */
+
+::selection {
+  color: white;
+  background-color: black;
+}
+
 /* Header */
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5rem;
-  background-color: #330110;
+  padding: 2em 3em;
+  background-color: #e9d5d3;
 }
 
-.logo {
-  width: 8%;
-  max-width: 8%;
+.logo img {
+  width: 80px;
   cursor: pointer;
 }
+
 
 .navbar {
   display: flex;
@@ -31,10 +38,7 @@ header {
 }
 
 .navbar-buttons {
-  background-color: #330110;
-  color: white;
-  border: none;
-  border-radius: 5px;
+  color: #330110;
   transition: linear 0.1s;
   cursor: pointer;
   font-size: 18px;
@@ -43,54 +47,110 @@ header {
 }
 
 .navbar-buttons:hover {
-  background-color: white;
+  box-shadow: 0 -0.15em #330110 inset;
   color: black;
 }
 
-/* Body */
-.sobre {
-  padding: 50px 0px;
+/* Main */
+
+body {
+  background-color: #e9d5d3;
+}
+
+main {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
 }
 
-.gif {
-  width: 30%;
-  height: 30%;
-  border-radius: 8px;
-}
-
-span {
-  color: rgb(170, 2, 2);
-  font-style: bold;
+.sobre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .informacoes {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: left;
-  background-color: #ffffff;
-  padding: 50px;
-  border: 1px, solid;
-  border-radius: 20px;
-  width: fit-content;
-  height: fit-content;
+  width: 700px;
+}
+
+.apresentacao {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  font-weight: 500;
+}
+
+span {
+  color: #fd0128;
+  font-style: bold;
 }
 
 .lista {
-  padding-top: 60px;
+  margin: 2em 0;
   display: flex;
   justify-content: space-evenly;
 }
 
-.lista-vantagem {
-  display: inline-block;
+.lista-vantagem,
+.lista-destinos {
+  width: 45%;
 }
 
-.lista-destinos {
-  display: inline-block;
+.lista-vantagem h3,
+.lista-destinos h3 {
+  text-align: center;
+  padding: 0.5em;
+  color: white;
+  background-color: #330110;
+}
+
+.lista-vantagem li,
+.lista-destinos li {
+  text-align: center;
+  padding: 0.3em;
+  background-color: white;
+  font-weight: 500;
+}
+
+.gif {
+  width: 30%;
+  height: 30%;
+  border-radius: 3px;
+  margin-left: 5em;
+}
+
+.motivacao {
+  margin-top: 4em;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.motivacao h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.agendamento {
+  padding: 1em 0;
+  border: none;
+  background-color: #fd0128;
+  font-weight: 700;
+  color: white;
+  font-size: 16px;
+  width: 40%;
+  align-self: center;
+  transition: linear 0.1s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.agendamento:hover {
+  background-color: #a70019;
 }
 
 /* Footer */
@@ -98,12 +158,12 @@ span {
 footer {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   padding: 0.7em 2em;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1em;
   background-color: #330110;
   color: white;
-  position: absolute;
-  bottom: 0%;
-  width: 100%;
+  position: fixed;
+  bottom: 0;
 }
