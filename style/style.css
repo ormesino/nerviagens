@@ -22,12 +22,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2em 3em;
+  padding: 2em 5em;
   background-color: #e9d5d3;
 }
 
 .logo img {
-  width: 80px;
+  width: 60px;
   cursor: pointer;
 }
 
@@ -68,6 +68,7 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin: 2em 0 0;
 }
 
 .informacoes {
@@ -155,7 +156,7 @@ span {
 
 /* Footer */
 
-footer {
+.rodape {
   display: flex;
   justify-content: space-between;
   width: 100%;
