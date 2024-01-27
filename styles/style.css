@@ -9,7 +9,7 @@
   font-family: "Inter", sans-serif;
 }
 
-/* Outras configs */
+/* Configs */
 
 ::selection {
   color: white;
@@ -18,7 +18,7 @@
 
 /* Header */
 
-header {
+.cabecalho {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,18 +26,17 @@ header {
   background-color: #e9d5d3;
 }
 
-.logo img {
+.cabecalho-logo {
   width: 60px;
   cursor: pointer;
 }
 
-
-.navbar {
+.cabecalho-menu {
   display: flex;
   gap: 1em;
 }
 
-.navbar-buttons {
+.cabecalho-menu-botao {
   color: #330110;
   transition: linear 0.1s;
   cursor: pointer;
@@ -46,7 +45,7 @@ header {
   padding: 0.5em;
 }
 
-.navbar-buttons:hover {
+.cabecalho-menu-botao:hover {
   box-shadow: 0 -0.15em #330110 inset;
   color: black;
 }
@@ -57,27 +56,28 @@ body {
   background-color: #e9d5d3;
 }
 
-main {
+.principal {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.sobre {
+.principal-sobre {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 2em 0 0;
+  padding: 2em 0 0;
+  gap: 5em;
 }
 
-.informacoes {
+.principal-sobre-informacoes {
   display: flex;
   flex-direction: column;
   width: 700px;
 }
 
-.apresentacao {
+.principal-sobre-informacoes-apresentacao {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -89,54 +89,52 @@ span {
   font-style: bold;
 }
 
-.lista {
-  margin: 2em 0;
+.principal-sobre-informacoes-lista {
+  padding: 2em 0;
   display: flex;
   justify-content: space-evenly;
 }
 
-.lista-vantagem,
-.lista-destinos {
+.principal-sobre-informacoes-lista-vantagem,
+.principal-sobre-informacoes-lista-destinos {
   width: 45%;
 }
 
-.lista-vantagem h3,
-.lista-destinos h3 {
+.principal-sobre-informacoes-lista-vantagem h3,
+.principal-sobre-informacoes-lista-destinos h3 {
   text-align: center;
   padding: 0.5em;
   color: white;
   background-color: #330110;
 }
 
-.lista-vantagem li,
-.lista-destinos li {
+.principal-sobre-informacoes-lista-vantagem li,
+.principal-sobre-informacoes-lista-destinos li {
   text-align: center;
   padding: 0.3em;
   background-color: white;
   font-weight: 500;
 }
 
-.gif {
-  width: 30%;
-  height: 30%;
+.principal-sobre-gif {
+  min-width: 30%;
   border-radius: 3px;
-  margin-left: 5em;
 }
 
-.motivacao {
-  margin-top: 4em;
+.principal-chamada {
+  padding-top: 4em;
   width: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.motivacao h2 {
+.principal-chamada h2 {
   text-align: center;
-  margin-bottom: 1em;
+  padding-bottom: 1em;
 }
 
-.agendamento {
+.principal-chamada-agendar {
   padding: 1em 0;
   border: none;
   background-color: #fd0128;
@@ -150,7 +148,7 @@ span {
   text-align: center;
 }
 
-.agendamento:hover {
+.principal-chamada-agendar:hover {
   background-color: #a70019;
 }
 
