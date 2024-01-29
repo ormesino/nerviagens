@@ -1,3 +1,20 @@
+/* Configs */
+
+:root {
+  --cor-primaria: #e9d5d3;
+  --cor-secundária: #330110;
+  --cor-terciaria: #fd0128;
+  --cor-quaternaria: #f6f6f6;
+  --cor-quinaria: #000000;
+  
+  --fonte-principal: "Inter", sans-serif;
+}
+
+::selection {
+  color: var(--cor-quaternaria);
+  background-color: var(--cor-quinaria);
+}
+
 /* Reset CSS */
 
 * {
@@ -6,14 +23,7 @@
   text-decoration: none;
   list-style-type: none;
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-}
-
-/* Configs */
-
-::selection {
-  color: white;
-  background-color: black;
+  font-family: var(--fonte-principal);
 }
 
 /* Header */
@@ -23,51 +33,51 @@
   justify-content: space-between;
   align-items: center;
   padding: 2em 5em;
-  background-color: #e9d5d3;
+  background-color: var(--cor-primaria);
 }
 
 .cabecalho-logo {
-  width: 60px;
+  width: 3.75rem;
   cursor: pointer;
 }
 
 .cabecalho-menu {
   display: flex;
-  gap: 1em;
+  gap: 1rem;
 }
 
 .cabecalho-menu-botao {
-  color: #330110;
+  color: var(--cor-secundária);
   transition: linear 0.1s;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: 700;
   padding: 0.5em;
 }
 
 .cabecalho-menu-botao:hover {
-  box-shadow: 0 -0.15em #330110 inset;
+  box-shadow: 0 -0.15em var(--cor-secundária) inset;
   color: black;
 }
 
 /* Main */
 
 body {
-  background-color: #e9d5d3;
+  background-color: var(--cor-primaria);
+  height: 100vh;
 }
 
 .principal {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 5em;
 }
 
 .principal-sobre {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  padding: 2em 0 0;
   gap: 5em;
 }
 
@@ -85,7 +95,7 @@ body {
 }
 
 span {
-  color: #fd0128;
+  color: var(--cor-terciaria);
   font-style: bold;
 }
 
@@ -104,48 +114,48 @@ span {
 .principal-sobre-informacoes-lista-destinos h3 {
   text-align: center;
   padding: 0.5em;
-  color: white;
-  background-color: #330110;
+  color: var(--cor-quaternaria);
+  background-color: var(--cor-secundária);
 }
 
 .principal-sobre-informacoes-lista-vantagem li,
 .principal-sobre-informacoes-lista-destinos li {
   text-align: center;
   padding: 0.3em;
-  background-color: white;
+  background-color: var(--cor-quaternaria);
   font-weight: 500;
 }
 
 .principal-sobre-gif {
-  min-width: 30%;
+  width: 30%;
   border-radius: 3px;
 }
 
 .principal-chamada {
-  padding-top: 4em;
+  padding-top: 2em;
   width: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.principal-chamada h2 {
+.principal-chamada {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  gap: 2em;
   padding-bottom: 1em;
 }
 
 .principal-chamada-agendar {
-  padding: 1em 0;
-  border: none;
-  background-color: #fd0128;
+  padding: 1em 1.5em;
+  background-color: var(--cor-terciaria);
   font-weight: 700;
   color: white;
-  font-size: 16px;
-  width: 40%;
-  align-self: center;
+  font-size: 1rem;
   transition: linear 0.1s;
   cursor: pointer;
-  text-align: center;
 }
 
 .principal-chamada-agendar:hover {
@@ -158,11 +168,11 @@ span {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 0.7em 2em;
+  padding: 0.7em 1em;
   font-weight: bold;
-  font-size: 1em;
-  background-color: #330110;
-  color: white;
+  font-size: 0.8rem;
+  background-color: var(--cor-secundária);
+  color: var(--cor-quaternaria);
   position: fixed;
   bottom: 0;
 }
