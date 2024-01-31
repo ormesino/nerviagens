@@ -6,7 +6,7 @@
   --cor-terciaria: #fd0128;
   --cor-quaternaria: #f6f6f6;
   --cor-quinaria: #000000;
-  
+
   --fonte-principal: "Inter", sans-serif;
 }
 
@@ -18,12 +18,24 @@
 /* Reset CSS */
 
 * {
-  margin: 0;
-  padding: 0;
   text-decoration: none;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: var(--fonte-principal);
+  transition: linear 0.1s;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: var(--cor-primaria);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 /* Header */
@@ -48,7 +60,6 @@
 
 .cabecalho-menu-botao {
   color: var(--cor-secundária);
-  transition: linear 0.1s;
   cursor: pointer;
   font-size: 1rem;
   font-weight: 700;
@@ -62,47 +73,42 @@
 
 /* Main */
 
-body {
-  background-color: var(--cor-primaria);
-  height: 100vh;
-}
-
 .principal {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  margin: 5em;
+  flex-direction: column;
+  padding: 2rem 5rem;
+  flex-grow: 1;
+  gap: 5rem;
 }
 
 .principal-sobre {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 5em;
+  gap: 5rem;
 }
 
 .principal-sobre-informacoes {
   display: flex;
   flex-direction: column;
-  width: 700px;
+  gap: 2rem;
 }
 
 .principal-sobre-informacoes-apresentacao {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 1rem;
   font-weight: 500;
 }
 
 span {
   color: var(--cor-terciaria);
-  font-style: bold;
+  font-weight: 700;
 }
 
 .principal-sobre-informacoes-lista {
-  padding: 2em 0;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .principal-sobre-informacoes-lista-vantagem,
@@ -113,39 +119,37 @@ span {
 .principal-sobre-informacoes-lista-vantagem h3,
 .principal-sobre-informacoes-lista-destinos h3 {
   text-align: center;
-  padding: 0.5em;
+  padding: 0.5em 0;
   color: var(--cor-quaternaria);
+  border-radius: 5px 5px 0 0;
   background-color: var(--cor-secundária);
 }
 
-.principal-sobre-informacoes-lista-vantagem li,
-.principal-sobre-informacoes-lista-destinos li {
+.principal-sobre-informacoes-lista-vantagem p,
+.principal-sobre-informacoes-lista-destinos p {
   text-align: center;
-  padding: 0.3em;
+  padding: 0.5em 1.5em;
   background-color: var(--cor-quaternaria);
   font-weight: 500;
 }
 
+.principal-sobre-informacoes-lista-vantagem p:nth-child(4),
+.principal-sobre-informacoes-lista-destinos p:nth-child(4) {
+  border-radius: 0 0 5px 5px;
+}
+
 .principal-sobre-gif {
-  width: 30%;
-  border-radius: 3px;
+  width: 40%;
+  border-radius: 5px;
 }
 
 .principal-chamada {
-  padding-top: 2em;
-  width: 600px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-
-.principal-chamada {
-  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   gap: 2em;
-  padding-bottom: 1em;
 }
 
 .principal-chamada-agendar {
@@ -154,8 +158,8 @@ span {
   font-weight: 700;
   color: white;
   font-size: 1rem;
-  transition: linear 0.1s;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .principal-chamada-agendar:hover {
@@ -167,12 +171,74 @@ span {
 .rodape {
   display: flex;
   justify-content: space-between;
+  flex-shrink: 0;
   width: 100%;
   padding: 0.7em 1em;
   font-weight: bold;
-  font-size: 0.8rem;
+  font-size: 1rem;
   background-color: var(--cor-secundária);
   color: var(--cor-quaternaria);
-  position: fixed;
-  bottom: 0;
+}
+
+/* Responsividade */
+
+@media (max-width: 1230px) {
+  .principal-sobre {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .principal-sobre-gif {
+    width: 50%;
+    min-width: 50%;
+  }
+
+  .principal-sobre-informacoes-lista-vantagem,
+  .principal-sobre-informacoes-lista-destinos {
+    width: 47%;
+  }
+
+  .principal {
+    gap: 4rem;
+    padding: 1rem 3rem 3rem;
+  }
+
+  .cabecalho-menu-botao {
+    color: var(--cor-quaternaria);
+    border-radius: 3px;
+    padding: 1rem 1.5rem;
+    background-color: #330110;
+  }
+}
+
+@media (max-width: 700px) {
+  .principal-sobre-informacoes-lista {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .principal-sobre-informacoes-lista-vantagem,
+  .principal-sobre-informacoes-lista-destinos {
+    width: 100%;
+  }
+
+  .principal-sobre-gif {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .cabecalho-logo {
+    display: none;
+  }
+
+  .cabecalho-menu {
+    gap: 2rem;
+  }
+
+  .cabecalho {
+    justify-content: center;
+    padding: 3rem 5rem 2rem 5rem;
+  }
 }
