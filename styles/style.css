@@ -19,7 +19,6 @@
 
 * {
   text-decoration: none;
-  list-style-type: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -123,6 +122,7 @@ span {
   color: var(--cor-quaternaria);
   border-radius: 5px 5px 0 0;
   background-color: var(--cor-secundária);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 .principal-sobre-informacoes-lista-vantagem p,
@@ -131,6 +131,7 @@ span {
   padding: 0.5em 1.5em;
   background-color: var(--cor-quaternaria);
   font-weight: 500;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 .principal-sobre-informacoes-lista-vantagem p:nth-child(4),
@@ -164,6 +165,54 @@ span {
 
 .principal-chamada-agendar:hover {
   background-color: #a70019;
+}
+
+/* Destinos */
+
+.card-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 1.5rem;
+  padding: 2rem 0 5rem;
+}
+
+.card-title {
+  padding: 0 0 1rem;
+  color: var(--cor-secundária);
+}
+
+.card {
+  display: flex;
+  font-weight: 500;
+  width: 50%;
+  background-color: var(--cor-quaternaria);
+  border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+  background-image: url("../assets/antartida.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 30%;
+  border-radius: 5px 0 0 5px;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1em;
+  width: 70%;
+  text-align: justify;
+}
+
+.card-info ul {
+  list-style: inside;
 }
 
 /* Footer */
