@@ -197,7 +197,7 @@ span {
   background-image: url("../assets/antartida.jpg");
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: 400px;
   width: 30%;
   border-radius: 5px 0 0 5px;
 }
@@ -205,10 +205,10 @@ span {
 .card-info {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 0.5rem;
   padding: 1em;
   width: 70%;
-  text-align: justify;
 }
 
 .card-info ul {
@@ -258,6 +258,10 @@ span {
     padding: 1rem 1.5rem;
     background-color: #330110;
   }
+
+  .card {
+    width: 80%;
+  }
 }
 
 @media (max-width: 700px) {
@@ -275,6 +279,23 @@ span {
   .principal-sobre-gif {
     width: 100%;
   }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .card-img {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px 5px 0 0;
+    background-position: top;
+  }
+
+  .card-info {
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+  }
+  
 }
 
 @media (max-width: 500px) {
