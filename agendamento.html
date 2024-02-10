@@ -1,37 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/icon type" href="../assets/nervlogo.png" />
+    <title>Agendamento</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/icon type" href="../assets/nervlogo.png" />
-  <title>Agendamento</title>
-  <link rel="stylesheet" href="../styles/style.css" />
-</head>
-
-<body>
-  <header class="cabecalho">
-    <a href="index.html">
-      <img class="cabecalho-logo" src="../assets/nervlogo.png" alt="Logo da NERV">
-    </a>
-
-    <nav class="cabecalho-menu">
-      <a class="cabecalho-menu-botao" href="index.html">
-        Inicial
+  <body>
+    <header class="cabecalho">
+      <a href="index.html">
+        <img
+          class="cabecalho-logo"
+          src="../assets/nervlogo.png"
+          alt="Logo da NERV"
+        />
       </a>
-      <a class="cabecalho-menu-botao" href="destinos.html">
-        Destinos
-      </a>
-    </nav>
-  </header>
 
-  <main class="principal">
-  </main>
+      <nav class="cabecalho-menu">
+        <a class="cabecalho-menu-botao" href="index.html"> Inicial </a>
+        <a class="cabecalho-menu-botao" href="destinos.html"> Destinos </a>
+      </nav>
+    </header>
 
-  <footer class="rodape">
-    <p>Desenvolvido com ❤️</p>
-    <p>Copyright &#169; 2024</p>
-  </footer>
-</body>
+    <main class="form-container">
+      <h1 class="form-container-title">Solicite sua Viagem</h1>
+      <div class="form-modal">
+        <form
+          class="form"
+          onsubmit="alert('Iremos enviar um e-mail com maiores detalhes!');"
+        >
+          <input
+            class="form-item"
+            type="text"
+            id="nome"
+            required
+            placeholder="Nome Completo"
+          />
+          <input
+            class="form-item"
+            type="email"
+            id="email"
+            required
+            placeholder="E-mail"
+          />
+          <select class="form-item" id="destino" required>
+            <option value="" disabled selected>Selecione um destino</option>
+            <option value="tokyo3">Tokyo-3</option>
+            <option value="antartida">Antártida</option>
+            <option value="tabgha">Base Tabgha</option>
+          </select>
+          <input
+            type="text"
+            class="form-item"
+            id="data"
+            onfocus="(this.type='date')"
+            required
+            placeholder="Data de Ida"
+          />
+          <input class="form-btn" type="submit" value="Agendar" />
+        </form>
+      </div>
+    </main>
 
+    <footer class="rodape">
+      <p>Desenvolvido com ❤️</p>
+      <p>Copyright &#169; 2024</p>
+    </footer>
+  </body>
 </html>
